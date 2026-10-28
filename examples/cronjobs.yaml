@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: billing-close
+spec:
+  schedule: "30 2 * * *"
+  timeZone: "America/New_York"
+  jobTemplate: {}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cache-warm
+spec:
+  schedule: "0 6 * * *"
+  timeZone: "America/New_York"
+  jobTemplate: {}

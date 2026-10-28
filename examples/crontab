@@ -1,0 +1,10 @@
+# Example user crontab
+CRON_TZ=America/Chicago
+30 2 * * *   /usr/local/bin/nightly-backup.sh
+15 1 * * *   /usr/local/bin/rotate-invoices.sh
+*/20 * * * * /usr/local/bin/poll-queue.sh
+0 9 * * 1-5  /usr/local/bin/standup-reminder.sh
+CRON_TZ=Europe/London
+0 1 * * 0    /usr/local/bin/weekly-report.sh
+CRON_TZ=UTC
+30 2 * * *   /usr/local/bin/safe-in-utc.sh
